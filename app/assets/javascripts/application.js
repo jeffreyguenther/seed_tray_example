@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var app = new CodeWalk()
+new PageDelegator(app)
