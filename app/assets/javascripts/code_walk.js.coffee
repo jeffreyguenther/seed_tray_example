@@ -1,4 +1,7 @@
 class @CodeWalk
     constructor: ->
-        console.log "App created"
-        new PageDelegator(@)
+        delegator = new PageDelegator(CodeWalk)
+        
+        # Setting the site wide ready
+        delegator.site_wide_ready = ->
+            console.log "happy stuff"

@@ -1,6 +1,10 @@
 class @PageDelegator
-    constructor: (@root) -> 
-        $(@ready)
+    constructor: (@root) ->
+        if window.Turbolinks != undefined
+            $(window).on "page:change", => 
+                @ready()
+        else
+            $(@ready)
 
     # Dynamically delegates ready to controller action specific ready methods
     # based on the classes found on the page
@@ -17,14 +21,11 @@ class @PageDelegator
 
         # Try to call ready for the candidate controller action combos
         controller_names.forEach (n) =>
-            console.log @
-            console.log window[n.controller][n.action]
-            if window[n.controller] && window[n.controller][n.action]
-                window[n.controller][n.action].ready()
+            if @root[n.controller] && @root[n.controller][n.action]
+                @root[n.controller][n.action].ready()
                 console.log "Executed #{n.controller}##{n.action} ready JS."
 
     site_wide_ready: ->
-        console.log "Site wide ready"
 
     capitalize: (string) ->
         "#{string[0].toUpperCase()}#{string.substring(1)}"
@@ -40,7 +41,6 @@ class @PageDelegator
 
     controllers: =>
         classes = document.getElementsByTagName("body")[0].className.split(" ")
-        console.log classes
 
         # Convert classes into controller objects
         $.map $.grep(classes, (c) -> c.indexOf("-") != -1), (c) =>

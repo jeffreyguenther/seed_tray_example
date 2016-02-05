@@ -1,5 +1,5 @@
-class @StaticPages
+class @CodeWalk.StaticPages
 
-class @StaticPages.Index
+class @CodeWalk.StaticPages.Index
     @ready: ->
-        $("body").html("Happy Days")
+        $("body").append("<p>Happy Days</p>")
