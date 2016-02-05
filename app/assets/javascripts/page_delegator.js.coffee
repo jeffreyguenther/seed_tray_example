@@ -1,8 +1,7 @@
 class @PageDelegator
     constructor: (@root) ->
         if window.Turbolinks != undefined
-            $(window).on "page:change", => 
-                @ready()
+            $(window).on "page:change", => @ready()
         else
             $(@ready)
 
