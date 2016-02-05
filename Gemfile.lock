@@ -113,6 +113,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    seed_tray (0.1.1)
+      jquery-rails
+      rails (~> 4.2.5)
     spring (1.6.3)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
@@ -150,6 +153,7 @@ DEPENDENCIES
   rails (= 4.2.5)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  seed_tray
   spring
   sqlite3
   turbolinks

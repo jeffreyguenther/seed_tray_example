@@ -24,3 +24,4 @@ so the designers are happy. You won't be using their classes and IDs so when the
 make that big brand shift you won't even have to touch the code. :smiley:
 
  
+What about JS view responses?...

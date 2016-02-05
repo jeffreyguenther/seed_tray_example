@@ -1,6 +1,6 @@
-class @CodeWalk.Discussions
+class @Codewalk.Discussions
 
-class @CodeWalk.Discussions.Index
+class @Codewalk.Discussions.Index
     @ready: ->
         console.log "discussions#index"
         new Discussions()

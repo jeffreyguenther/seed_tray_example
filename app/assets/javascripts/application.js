@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require seed_tray
 
-var app = new CodeWalk()
+var app = new Codewalk();
