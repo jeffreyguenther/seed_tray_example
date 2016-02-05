@@ -16,4 +16,3 @@
 //= require_tree .
 
 var app = new CodeWalk()
-new PageDelegator(app)
