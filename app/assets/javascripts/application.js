@@ -13,7 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require seed_tray_example
 //= require_tree .
 //= require seed_tray
 
-var app = new Codewalk();
+var app = new SeedTrayExample();
